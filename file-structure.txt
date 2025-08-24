@@ -1,0 +1,18 @@
+/swiftlogistics/
+├── backend/              // All .NET projects will live here
+│   ├── SwiftLogistics.sln
+│   ├── services/
+│   │   ├── ApiGateway/
+│   │   ├── Auth.API/
+│   │   ├── Orders.API/
+│   │   ├── Tracking.API/
+│   │   └── ...
+│   └── workers/
+│       └── OrderProcessor/
+├── frontend/             // Your Angular project
+│   └── swifttrack-client/
+├── mocks/                // Your three mock system simulators
+│   ├── MockCms.API/
+│   ├── MockRos.API/
+│   └── MockWms.TcpServer/
+└── docker-compose.yml    // The magic file to run everything
