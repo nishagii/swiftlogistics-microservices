@@ -1,0 +1,16 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine # 'management' tag includes a web UI
+    container_name: swiftlogistics-rabbitmq
+    ports:
+      - "5672:5672"    # Main port for applications to connect
+      - "15672:15672"  # Web management UI port
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
