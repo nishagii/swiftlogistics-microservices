@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+// An ASP.NET Core Web API that accepts XML and returns a success message.
 namespace MockCms.API.Controllers
 {
     [Route("[controller]")]
