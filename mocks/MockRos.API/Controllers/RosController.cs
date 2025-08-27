@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+// An ASP.NET Core Web API that accepts JSON and returns a canned JSON route.
 namespace MockRos.API.Controllers
 {
 
