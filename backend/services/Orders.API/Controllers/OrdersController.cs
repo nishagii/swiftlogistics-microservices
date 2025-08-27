@@ -20,7 +20,7 @@ namespace Orders.API.Controllers
         }
 
         [HttpPost]
-        public Task<IActionResult> CreateOrder([FromBody] CreateOrderDto orderDto)
+        public async Task<IActionResult> CreateOrder([FromBody] CreateOrderDto orderDto)
         {
             _logger.LogInformation("Received new order from client: {ClientName}",orderDto.ClientName);
 
@@ -32,6 +32,18 @@ namespace Orders.API.Controllers
                 DeliveryAddress = orderDto.DeliveryAddress,
                 Timestamp = DateTime.UtcNow
             };
+            
+            // Publish the event to RabbitMQ via MassTransit
+            await _publishEndpoint.Publish(orderReceivedEvent);
+            
+            _logger.LogInformation("Order {OrderId} published to the message broker.", orderReceivedEvent.OrderId);
+            
+            // Return a 202 Accepted response. This tells the client "We've accepted your
+            // request and will process it, but we're not done yet."
+            
+            
+            // This is the correct pattern for asynchronous operations.
+            return Accepted(new { orderReceivedEvent.OrderId });
         }
     }
     
