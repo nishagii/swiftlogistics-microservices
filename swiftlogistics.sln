@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockRos.API", "mocks\MockRo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MockWms.TcpServer", "mocks\MockWms.TcpServer\MockWms.TcpServer.csproj", "{ADCEEE19-AD87-4B53-960C-F1EA86BE9288}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.API", "backend\services\Orders.API\Orders.API.csproj", "{D25E6DB6-8CD7-429A-B0AD-C78917503385}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{ADCEEE19-AD87-4B53-960C-F1EA86BE9288}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADCEEE19-AD87-4B53-960C-F1EA86BE9288}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADCEEE19-AD87-4B53-960C-F1EA86BE9288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25E6DB6-8CD7-429A-B0AD-C78917503385}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25E6DB6-8CD7-429A-B0AD-C78917503385}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25E6DB6-8CD7-429A-B0AD-C78917503385}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25E6DB6-8CD7-429A-B0AD-C78917503385}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
