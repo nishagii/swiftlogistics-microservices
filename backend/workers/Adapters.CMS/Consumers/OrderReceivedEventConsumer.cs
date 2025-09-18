@@ -40,7 +40,7 @@ public class OrderReceivedEventConsumer : IConsumer<OrderReceivedEvent>
         try
         {
             //make the POST request
-            var response = await httpClient.PostAsync("/cms/order", content);
+            var response = await httpClient.PostAsync("/cms/orders", content);
 
             //check the response and log the outcome
             if (response.IsSuccessStatusCode)
