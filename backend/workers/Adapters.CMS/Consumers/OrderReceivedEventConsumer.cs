@@ -17,7 +17,7 @@ public class OrderReceivedEventConsumer : IConsumer<OrderReceivedEvent>
 
     public async Task Consume(ConsumeContext<OrderReceivedEvent> context)
     {
-        var message = context.Message;
+        var message = context.Message; //strongly typed C# object (masstransit desirialize the JSON to C# object)
         _logger.LogInformation("Recieved OrderReceivedEvent: {OrderId}",message.OrderId);
         
         
@@ -26,7 +26,7 @@ public class OrderReceivedEventConsumer : IConsumer<OrderReceivedEvent>
         // 1. Create an HttpClient to call the mock service
         var httpClient = _httpClientFactory.CreateClient("CmsClient");
         
-        // 2. Manually construct the XML payload
+        // 2. Manually construct the XML payload (C# interpolation)
         var xmlPayload = 
             $@"<order>
                 <orderId>{message.OrderId}</orderId>
