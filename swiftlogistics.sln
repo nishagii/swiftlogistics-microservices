@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters.CMS", "backend\wor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters.ROS", "backend\workers\Adapters.ROS\Adapters.ROS.csproj", "{ADED86F9-2CDC-4936-B167-A9A511FCB488}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters.WMS", "backend\workers\Adapters.WMS\Adapters.WMS.csproj", "{2E56E8C3-D730-4CBC-9A2D-55658E6E2AF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{ADED86F9-2CDC-4936-B167-A9A511FCB488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADED86F9-2CDC-4936-B167-A9A511FCB488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADED86F9-2CDC-4936-B167-A9A511FCB488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E56E8C3-D730-4CBC-9A2D-55658E6E2AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E56E8C3-D730-4CBC-9A2D-55658E6E2AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E56E8C3-D730-4CBC-9A2D-55658E6E2AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E56E8C3-D730-4CBC-9A2D-55658E6E2AF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
