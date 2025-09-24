@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-Adapters.WMS-046c90d4-57b9-41ac-a75a-eddcfd47806a</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.3" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Common.Contracts\Common.Contracts.csproj" />
+    </ItemGroup>
+</Project>
